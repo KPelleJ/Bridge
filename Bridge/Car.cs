@@ -12,7 +12,7 @@ namespace Bridge
     /// </summary>
     public class Car:Vehicle
     {
-        public Car(string licensePlate, DateTime date):base(licensePlate, date, 230)
+        public Car(string licensePlate, DateTime date, bool brobizz):base(licensePlate, date, 230, brobizz)
         {
         }
 

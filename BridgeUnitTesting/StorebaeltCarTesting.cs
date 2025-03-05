@@ -14,11 +14,11 @@ namespace BridgeUnitTesting
         public void StorebaeltCar_PriceWeekendWithBrobizz_CorrectPrice_ShouldPass(int year, int month, int day)
         {
             //Arrange
-            StorebaeltCar testCar = new("tester", new DateTime(year, month, day));
+            StorebaeltCar testCar = new("tester", new DateTime(year, month, day), true);
             double expectedResult = Math.Abs(230 * 0.85 * 0.9);
 
             //Act
-            var actualResult = testCar.Price(true);
+            var actualResult = testCar.Price();
 
 
             //Assert
@@ -30,11 +30,11 @@ namespace BridgeUnitTesting
         public void StorebaeltCar_PriceWeekendNoBrobizz_CorrectPrice_ShouldPass(int year, int month, int day)
         {
             //Arrange
-            StorebaeltCar testCar = new("tester", new DateTime(year, month, day));
+            StorebaeltCar testCar = new("tester", new DateTime(year, month, day), false);
             double expectedResult = Math.Abs(230 * 0.85);
 
             //Act
-            var actualResult = testCar.Price(false);
+            var actualResult = testCar.Price();
 
 
             //Assert

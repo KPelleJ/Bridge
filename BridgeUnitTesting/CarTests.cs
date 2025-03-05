@@ -14,11 +14,11 @@ namespace BridgeUnitTesting
         public void Car_Price_CorrectPrice_ShouldPass()
         {
             //Assign
-            Car testCar = new("test", DateTime.Now);
+            Car testCar = new("test", DateTime.Now, false);
             double expectedResult = 230;
 
             //Act
-            var actualResult = testCar.Price(false);
+            var actualResult = testCar.Price();
 
 
             //Assert
@@ -29,7 +29,7 @@ namespace BridgeUnitTesting
         public void Car_VehicleType_CorrectType_ShouldPass()
         {
             //Assign
-            Car testCar = new("test", DateTime.Now);
+            Car testCar = new("test", DateTime.Now, false);
             string expectedResult = "Car";
 
             //Act
@@ -49,7 +49,7 @@ namespace BridgeUnitTesting
 
 
             //Act
-            TestDelegate actualResult = () => new Car(licensePlate, DateTime.Now);
+            TestDelegate actualResult = () => new Car(licensePlate, DateTime.Now, false);
 
 
             //Assert
@@ -60,12 +60,12 @@ namespace BridgeUnitTesting
         public void Car_PriceWithBrobizzDiscount_RightPrice_ShouldPass()
         {
             //Assign
-            Car testCar = new("tester", DateTime.Now);
+            Car testCar = new("tester", DateTime.Now, true);
             double expectedResult = 230 * 0.9;
 
 
             //Act
-            var actualResult = testCar.Price(true);
+            var actualResult = testCar.Price();
 
 
             //Assert

@@ -13,7 +13,7 @@ namespace Bridge
     public class MC:Vehicle
     {
 
-        public MC(string licensePlate, DateTime date):base(licensePlate, date, 120)
+        public MC(string licensePlate, DateTime date, bool brobizz):base(licensePlate, date, 120, brobizz)
         {
         }
 

@@ -9,12 +9,11 @@ namespace _StoreBaeltTicketLibrary_
 {
     public class StorebaeltCar : Car
     {
-        public StorebaeltCar(string licensePlate, DateTime date) : base(licensePlate, date)
+        public StorebaeltCar(string licensePlate, DateTime date, bool brobizz) : base(licensePlate, date, brobizz)
         {
-
         }
 
-        public override double Price(bool brobizz)
+        public override double Price()
         {
             double outputPrice = _basePrice;
 
@@ -23,7 +22,7 @@ namespace _StoreBaeltTicketLibrary_
                 outputPrice *= 0.85;
             }
 
-            if(brobizz)
+            if(Brobizz)
             {
                 outputPrice *= 0.9;
             }

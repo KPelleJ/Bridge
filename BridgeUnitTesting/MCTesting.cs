@@ -13,12 +13,12 @@ namespace BridgeUnitTesting
         public void MC_Price_CorrectPrice_ShouldPass()
         {
             //Assign
-            MC testMC = new("test", DateTime.Now);
+            MC testMC = new("test", DateTime.Now, false);
             double expectedResult = 120;
 
 
             //Act
-            var actualResult = testMC.Price(false);
+            var actualResult = testMC.Price();
 
 
             //Assert
@@ -29,7 +29,7 @@ namespace BridgeUnitTesting
         public void MC_VehicleType_CorrectType_ShouldPass()
         {
             //Assign
-            MC testMC = new("test", DateTime.Now);
+            MC testMC = new("test", DateTime.Now, false);
             string expectedResult = "MC";
 
 
@@ -51,7 +51,7 @@ namespace BridgeUnitTesting
 
 
             //Act
-            TestDelegate actualResult = () => new MC(licenseplate, DateTime.Now);
+            TestDelegate actualResult = () => new MC(licenseplate, DateTime.Now, false);
 
 
             //Assert
@@ -62,12 +62,12 @@ namespace BridgeUnitTesting
         public void MC_PriceWithBrobizzDiscount_RightPrice_ShouldPass()
         {
             //Assign
-            MC testMC = new("tester", DateTime.Now);
+            MC testMC = new("tester", DateTime.Now, true);
             double expectedResult = 120 * 0.9;
 
 
             //Act
-            var actualResult = testMC.Price(true);
+            var actualResult = testMC.Price();
 
 
             //Assert

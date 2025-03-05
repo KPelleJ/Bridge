@@ -17,6 +17,7 @@ namespace Bridge
         protected double _basePrice;
 
         public DateTime Date { get; set; }
+        public bool Brobizz { get; set; }
 
         /// <summary>
         /// The vehicles identifier. Checks whether the license plate only contains numbers and alphabetic characters.
@@ -28,11 +29,12 @@ namespace Bridge
                                    throw new ArgumentException("The license plate can only contain letters and numbers and must not be longer than 7 characters");
         }
 
-        public Vehicle(string licensePlate, DateTime date, double basePrice)
+        public Vehicle(string licensePlate, DateTime date, double basePrice, bool brobizz)
         {
             LicensePlate = licensePlate;
             Date = date;
             _basePrice = basePrice;
+            Brobizz = brobizz;
         }
 
         /// <summary>
@@ -40,11 +42,11 @@ namespace Bridge
         /// </summary>
         /// <param name="brobizz">The bool deciding to give a discount. True for discount</param>
         /// <returns></returns>
-        public virtual double Price(bool brobizz)
+        public virtual double Price()
         {
             double brobizzDiscount = 0.1;
 
-            return brobizz ? _basePrice * (1 - brobizzDiscount) : _basePrice;
+            return Brobizz ? _basePrice * (1 - brobizzDiscount) : _basePrice;
         }
 
 
