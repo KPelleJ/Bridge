@@ -7,31 +7,18 @@ using System.Threading.Tasks;
 
 namespace Bridge
 {
-    public class MC
+    public class MC:Vehicle
     {
-        private string _licensePlate;
-
-        public DateTime Date { get; set; }
-
-        public string LicensePlate
+        public MC(string licensePlate, DateTime date):base(licensePlate, date)
         {
-            get => _licensePlate;
-            set => _licensePlate = Regex.IsMatch(value, @"^[a-zA-Z0-9]+$") ? value:
-                                   throw new ArgumentException("The license plate can only contain letters and numbers");
         }
 
-        public MC(string licensePlate, DateTime date)
-        {
-            LicensePlate = licensePlate;
-            Date = date;
-        }
-
-        public double Price()
+        public override double Price()
         {
             return 120;
         }
 
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "MC";
         }
