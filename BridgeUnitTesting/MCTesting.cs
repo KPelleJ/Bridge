@@ -41,8 +41,9 @@ namespace BridgeUnitTesting
             Assert.That(actualResult, Is.EqualTo(expectedResult));
         }
 
-        [TestCase("@@@@@")]
-        [TestCase("----.,.-")]
+        [TestCase("@@@@@@")]
+        [TestCase("-----")]
+        [TestCase("OBE231321")]
         public void MC_LicensePlate_InvalidCharacters_ShouldThrowException(string licenseplate)
         {
             //Assign

@@ -42,7 +42,7 @@ namespace BridgeUnitTesting
 
         [TestCase("@@@@@")]
         [TestCase("-----")]
-        [TestCase("ABC$%--123")]
+        [TestCase("ABC1234567")]
         public void Car_LicensePlate_IllegalCharacters_ShouldThrowException(string licensePlate)
         {
             //Assign
