@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csproj", "{76CA7659-34AA-473B-8EED-9A4C2492B987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgeUnitTesting", "BridgeUnitTesting\BridgeUnitTesting.csproj", "{12CB001F-089F-4DB6-B9D6-69D4252B024B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76CA7659-34AA-473B-8EED-9A4C2492B987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76CA7659-34AA-473B-8EED-9A4C2492B987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76CA7659-34AA-473B-8EED-9A4C2492B987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76CA7659-34AA-473B-8EED-9A4C2492B987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12CB001F-089F-4DB6-B9D6-69D4252B024B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12CB001F-089F-4DB6-B9D6-69D4252B024B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12CB001F-089F-4DB6-B9D6-69D4252B024B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12CB001F-089F-4DB6-B9D6-69D4252B024B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3B74614-5109-44E9-BB6C-5F7EA7F89D68}
+	EndGlobalSection
+EndGlobal
