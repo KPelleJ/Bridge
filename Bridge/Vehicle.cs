@@ -14,7 +14,7 @@ namespace Bridge
     public abstract class Vehicle
     {
         private string _licensePlate;
-        private double _basePrice;
+        protected double _basePrice;
 
         public DateTime Date { get; set; }
 

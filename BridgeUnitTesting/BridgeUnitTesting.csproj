@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Bridge\Bridge.csproj" />
+    <ProjectReference Include="..\”StoreBaeltTicketLibrary”\”StoreBaeltTicketLibrary”.csproj" />
   </ItemGroup>
 
   <ItemGroup>

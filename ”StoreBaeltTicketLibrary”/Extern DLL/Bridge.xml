@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bridge</name>
+    </assembly>
+    <members>
+        <member name="T:Bridge.Car">
+            <summary>
+            Car sub class that inherits from the Vehicle base class. Base ticket price of car is 230
+            </summary>
+        </member>
+        <member name="T:Bridge.MC">
+            <summary>
+            MC sub class that inherits from the Vehicle base class. Base ticket price of car is 120
+            </summary>
+        </member>
+        <member name="T:Bridge.Vehicle">
+            <summary>
+            Vehicle object to store data of the vehicles license plate and the date of the bridge passing
+            </summary>
+        </member>
+        <member name="P:Bridge.Vehicle.LicensePlate">
+            <summary>
+            The vehicles identifier. Checks whether the license plate only contains numbers and alphabetic characters.
+            </summary>
+        </member>
+        <member name="M:Bridge.Vehicle.Price(System.Boolean)">
+            <summary>
+            Determines the price of the vehicle. The bool Brobizz decides whether or not to add a discount to the ticket price.
+            </summary>
+            <param name="brobizz">The bool deciding to give a discount. True for discount</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bridge.Vehicle.VehicleType">
+            <summary>
+            Determines the type of the vehicle
+            </summary>
+            <returns>The vehicles determines type</returns>
+        </member>
+    </members>
+</doc>

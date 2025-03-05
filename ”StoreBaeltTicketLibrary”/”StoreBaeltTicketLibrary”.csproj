@@ -2,9 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>_StoreBaeltTicketLibrary_</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Bridge">
+      <HintPath>..\..\Base system DLLs\Bridge.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>
