@@ -9,13 +9,8 @@ namespace Bridge
 {
     public class MC:Vehicle
     {
-        public MC(string licensePlate, DateTime date):base(licensePlate, date)
+        public MC(string licensePlate, DateTime date):base(licensePlate, date, 120)
         {
-        }
-
-        public override double Price()
-        {
-            return 120;
         }
 
         public override string VehicleType()

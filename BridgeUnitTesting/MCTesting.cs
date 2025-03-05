@@ -18,7 +18,7 @@ namespace BridgeUnitTesting
 
 
             //Act
-            var actualResult = testMC.Price();
+            var actualResult = testMC.Price(false);
 
 
             //Assert
@@ -56,6 +56,22 @@ namespace BridgeUnitTesting
 
             //Assert
             Assert.Throws<ArgumentException>(actualResult);
+        }
+
+        [Test]
+        public void MC_PriceWithBrobizzDiscount_RightPrice_ShouldPass()
+        {
+            //Assign
+            MC testMC = new("tester", DateTime.Now);
+            double expectedResult = 120 * 0.9;
+
+
+            //Act
+            var actualResult = testMC.Price(true);
+
+
+            //Assert
+            Assert.That(actualResult, Is.EqualTo(expectedResult));
         }
     }
 }

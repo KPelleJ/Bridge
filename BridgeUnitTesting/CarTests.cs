@@ -18,7 +18,7 @@ namespace BridgeUnitTesting
             double expectedResult = 230;
 
             //Act
-            var actualResult = testCar.Price();
+            var actualResult = testCar.Price(false);
 
 
             //Assert
@@ -54,6 +54,22 @@ namespace BridgeUnitTesting
 
             //Assert
             Assert.Throws<ArgumentException>(actualResult);
+        }
+
+        [Test]
+        public void Car_PriceWithBrobizzDiscount_RightPrice_ShouldPass()
+        {
+            //Assign
+            Car testCar = new("tester", DateTime.Now);
+            double expectedResult = 230 * 0.9;
+
+
+            //Act
+            var actualResult = testCar.Price(true);
+
+
+            //Assert
+            Assert.That(actualResult, Is.EqualTo(expectedResult));
         }
     }
 }
