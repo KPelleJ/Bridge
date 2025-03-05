@@ -46,7 +46,6 @@ namespace BridgeUnitTesting
         public void Car_LicensePlate_IllegalCharacters_ShouldThrowException(string licensePlate)
         {
             //Assign
-            var expectedResult = new ArgumentException();
 
 
             //Act

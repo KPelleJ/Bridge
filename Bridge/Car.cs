@@ -21,16 +21,9 @@ namespace Bridge
         /// </summary>
         public string LicensePlate
         {
-            get { return _licensePlate; }
-            set
-            {
-                if (!Regex.IsMatch(value, @"^[a-zA-Z0-9]+$"))
-                {
-                    throw new ArgumentException("The license plate can only contain letters and numbers");
-                }
-
-                value = _licensePlate;
-            }
+            get => _licensePlate; 
+            set => _licensePlate = Regex.IsMatch(value, @"^[a-zA-Z0-9]+$") ? value: 
+                                   throw new ArgumentException("The license plate can only contain letters and numbers");
         }
 
         public Car(string licensePlate, DateTime date)
