@@ -20,7 +20,8 @@ namespace Bridge
         public bool Brobizz { get; set; }
 
         /// <summary>
-        /// The vehicles identifier. Checks whether the license plate only contains numbers and alphabetic characters.
+        /// The vehicles identifier. Checks the length and 
+        /// whether the license plate only contains numbers and alphabetic characters.
         /// </summary>
         public string LicensePlate
         {
@@ -29,6 +30,13 @@ namespace Bridge
                                    throw new ArgumentException("The license plate can only contain letters and numbers and must not be longer than 7 characters");
         }
 
+        /// <summary>
+        /// A vehicle object must be created with the licensePlate, date, basePrice and brobizz attributes
+        /// </summary>
+        /// <param name="licensePlate"></param>
+        /// <param name="date"></param>
+        /// <param name="basePrice"></param>
+        /// <param name="brobizz"></param>
         public Vehicle(string licensePlate, DateTime date, double basePrice, bool brobizz)
         {
             LicensePlate = licensePlate;
@@ -53,7 +61,7 @@ namespace Bridge
         /// <summary>
         /// Determines the type of the vehicle
         /// </summary>
-        /// <returns>The vehicles determines type</returns>
+        /// <returns>The type determined by the vehicle</returns>
         public abstract string VehicleType();
     }
 }

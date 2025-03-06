@@ -45,12 +45,8 @@ namespace BridgeUnitTesting
         [TestCase("ABC1234567")]
         public void Car_LicensePlate_IllegalCharacters_ShouldThrowException(string licensePlate)
         {
-            //Assign
-
-
             //Act
             TestDelegate actualResult = () => new Car(licensePlate, DateTime.Now, false);
-
 
             //Assert
             Assert.Throws<ArgumentException>(actualResult);

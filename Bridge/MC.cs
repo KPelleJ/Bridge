@@ -17,6 +17,10 @@ namespace Bridge
         {
         }
 
+        /// <summary>
+        /// The abstract method VehicleType is overridden to return "MC" as the correct type of the MC sub class.
+        /// </summary>
+        /// <returns>The MC type as a string</returns>
         public override string VehicleType()
         {
             return "MC";

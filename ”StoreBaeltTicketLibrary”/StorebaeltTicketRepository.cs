@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace _StoreBaeltTicketLibrary_
 {
+    /// <summary>
+    /// Repository related to the Storebaelt ticketing system. Contains an internal list.
+    /// Mostly for testing purposes.
+    /// </summary>
     public class StorebaeltTicketRepository : ITicketRepository
     {
-        public static List<Vehicle> _tickets;
+        private static List<Vehicle> _tickets;
 
         public StorebaeltTicketRepository()
         {
