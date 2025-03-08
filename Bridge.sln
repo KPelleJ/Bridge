@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35818.85 d17.13
+VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csproj", "{76CA7659-34AA-473B-8EED-9A4C2492B987}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "”StoreBaeltTicketLibrary”", "”StoreBaeltTicketLibrary”\”StoreBaeltTicketLibrary”.csproj", "{78972616-18B6-443F-A1A1-02052EEA9FC5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OresundBronTicketLibrary", "OresundBronTicketLibrary\OresundBronTicketLibrary.csproj", "{3E03189C-E23E-402F-849A-6F36CD838FA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPServers", "TCPServers\TCPServers.csproj", "{A6763277-7452-4399-B620-CDFF99F4DF60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3E03189C-E23E-402F-849A-6F36CD838FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E03189C-E23E-402F-849A-6F36CD838FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E03189C-E23E-402F-849A-6F36CD838FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6763277-7452-4399-B620-CDFF99F4DF60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6763277-7452-4399-B620-CDFF99F4DF60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6763277-7452-4399-B620-CDFF99F4DF60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6763277-7452-4399-B620-CDFF99F4DF60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
