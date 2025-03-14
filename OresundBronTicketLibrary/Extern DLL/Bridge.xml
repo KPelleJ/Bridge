@@ -9,10 +9,22 @@
             Car sub class that inherits from the Vehicle base class. Base ticket price of car is 230
             </summary>
         </member>
+        <member name="M:Bridge.Car.VehicleType">
+            <summary>
+            The abstract method VehicleType is overridden to return "Car" as the correct type of the Car sub class.
+            </summary>
+            <returns>The Car type as a string</returns>
+        </member>
         <member name="T:Bridge.MC">
             <summary>
             MC sub class that inherits from the Vehicle base class. Base ticket price of car is 120
             </summary>
+        </member>
+        <member name="M:Bridge.MC.VehicleType">
+            <summary>
+            The abstract method VehicleType is overridden to return "MC" as the correct type of the MC sub class.
+            </summary>
+            <returns>The MC type as a string</returns>
         </member>
         <member name="T:Bridge.Vehicle">
             <summary>
@@ -21,8 +33,18 @@
         </member>
         <member name="P:Bridge.Vehicle.LicensePlate">
             <summary>
-            The vehicles identifier. Checks whether the license plate only contains numbers and alphabetic characters.
+            The vehicles identifier. Checks the length and 
+            whether the license plate only contains numbers and alphabetic characters.
             </summary>
+        </member>
+        <member name="M:Bridge.Vehicle.#ctor(System.String,System.DateTime,System.Double,System.Boolean)">
+            <summary>
+            A vehicle object must be created with the licensePlate, date, basePrice and brobizz attributes
+            </summary>
+            <param name="licensePlate"></param>
+            <param name="date"></param>
+            <param name="basePrice"></param>
+            <param name="brobizz"></param>
         </member>
         <member name="M:Bridge.Vehicle.Price">
             <summary>
@@ -35,7 +57,7 @@
             <summary>
             Determines the type of the vehicle
             </summary>
-            <returns>The vehicles determines type</returns>
+            <returns>The type determined by the vehicle</returns>
         </member>
     </members>
 </doc>
