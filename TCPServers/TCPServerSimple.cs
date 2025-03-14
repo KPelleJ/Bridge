@@ -15,11 +15,16 @@ namespace TCPServers
         private IPAddress _ip = IPAddress.Any;
         private const int _portNumber = 4000;
 
+        /// <summary>
+        /// Starts the TCP server and awaits a client to be connected. Will run multiple async clients since the
+        /// task result is discarded and will return to the await of a new TcpClient.
+        /// </summary>
+        /// <returns></returns>
         public async Task StartAsync()
         {
-            TcpListener server = new TcpListener(_ip, 4000);
+            TcpListener server = new TcpListener(_ip, _portNumber);
             server.Start();
-            Console.WriteLine("Simple Server Started");
+            Console.WriteLine($"Simple Server Started on port: {_portNumber}");
 
             while (true)
             {
@@ -28,6 +33,12 @@ namespace TCPServers
             }
         }
 
+        /// <summary>
+        /// Handles the logic for handling a client. Does various input validations to check for a valid input
+        /// and redirects to the ProcessCommand method if input checks are valid.
+        /// </summary>
+        /// <param name="client">The connected client that is to be handled</param>
+        /// <returns></returns>
         private async Task HandleClientAsync(TcpClient client)
         {
             Console.WriteLine("Client connected to TCP simple server");
@@ -41,10 +52,10 @@ namespace TCPServers
 
                 await writer.WriteLineAsync("Choose an action:'random' , 'add' , 'subtract' or 'close'");
 
-                //Reads the input from the client
+                // Reads the input from the client
                 string? lineInput = await reader.ReadLineAsync();
 
-                //Handles the actions for the inputLine
+                // Validates and handles the actions for the inputLine
                 if (string.IsNullOrWhiteSpace(lineInput))
                 {
                     await writer.WriteLineAsync("Invalid input");
@@ -77,7 +88,7 @@ namespace TCPServers
         }
 
 
-        //Helper methods
+        // Helper methods
         private bool ValidCommandCheck(string input)
         {
             return input switch
