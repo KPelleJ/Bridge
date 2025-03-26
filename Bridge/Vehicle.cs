@@ -58,7 +58,7 @@ namespace Bridge
         }
 
 
-        /// <summary>
+        /// <summary> 
         /// Determines the type of the vehicle
         /// </summary>
         /// <returns>The type determined by the vehicle</returns>
