@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Bridge
 {
-    /// <summary>
+    /// <summary> 
     /// Car sub class that inherits from the Vehicle base class. Base ticket price of car is 230
     /// </summary>
     public class Car:Vehicle
